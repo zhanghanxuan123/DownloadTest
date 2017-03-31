@@ -24,7 +24,7 @@ import static com.zhx.downloadtest.AppUtil.sApp;
 public class MainActivity extends AppCompatActivity{
     private static final String MIME_TYPE_APK = "application/vnd.android.package-archive";
     Button mButton;
-    public static final String PACKAGE_URL = "http://on2ekkj4q.bkt.clouddn.com/download_demo.apk";
+    public static final String PACKAGE_URL = "";
     private DownloadingDialog mDownloadingDialog;
 
     @Override
@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity{
         String appName = null;
         try {
             appName = sApp.getPackageManager().getPackageInfo(sApp.getPackageName(), 0).applicationInfo.loadLabel(sApp.getPackageManager()).toString();
+
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }
